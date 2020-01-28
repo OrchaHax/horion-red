@@ -77,6 +77,7 @@ void ModuleManager::initModules() {
 	this->moduleList.push_back(new CrystalAura());
 	this->moduleList.push_back(new Timer());
 	this->moduleList.push_back(new Disabler());
+	this->moduleList.push_back(new NightMode());
 
 #ifdef _DEBUG
 	this->moduleList.push_back(new TestModule());
