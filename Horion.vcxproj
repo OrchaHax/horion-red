@@ -176,6 +176,7 @@
     <ClCompile Include="Horion\Module\Modules\Criticals.cpp" />
     <ClCompile Include="Horion\Module\Modules\CrystalAura.cpp" />
     <ClCompile Include="Horion\Module\Modules\Derp.cpp" />
+    <ClCompile Include="Horion\Module\Modules\Disabler.cpp" />
     <ClCompile Include="Horion\Module\Modules\EditionFaker.cpp" />
     <ClCompile Include="Horion\Module\Modules\ESP.cpp" />
     <ClCompile Include="Horion\Module\Modules\FastEast.cpp" />
@@ -264,6 +265,7 @@
     <ClInclude Include="Horion\Module\Modules\Criticals.h" />
     <ClInclude Include="Horion\Module\Modules\CrystalAura.h" />
     <ClInclude Include="Horion\Module\Modules\Derp.h" />
+    <ClInclude Include="Horion\Module\Modules\Disabler.h" />
     <ClInclude Include="Horion\Module\Modules\EditionFaker.h" />
     <ClInclude Include="Horion\Module\Modules\ESP.h" />
     <ClInclude Include="Horion\Module\Modules\FastEat.h" />

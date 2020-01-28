@@ -72,6 +72,7 @@
 #include "Modules/Tracer.h"
 #include "Modules/TriggerBot.h"
 #include "Modules/Xray.h"
+#include "Modules/Disabler.h"
 
 #ifdef _DEBUG
 #include "Modules/TestModule.h"
