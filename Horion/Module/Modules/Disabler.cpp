@@ -30,16 +30,16 @@ void Disabler::onTick(C_GameMode* gm) {
 				C_MovePlayerPacket* a2 = new C_MovePlayerPacket(g_Data.getLocalPlayer(), Nofavec);
 				g_Data.getClientInstance()->loopbackPacketSender->sendToServer(a2);
 				delete a2;
-				if (isMineplex) {
-					if (strcmp(g_Data.getRakNetInstance()->serverIp.getText(), "mco.mineplex.com") == 0) {
-						vec3_t pos = *g_Data.getLocalPlayer()->getPos();
-						C_MovePlayerPacket* movePlayerPacket = new C_MovePlayerPacket(g_Data.getLocalPlayer(), pos);
-						g_Data.getClientInstance()->loopbackPacketSender->sendToServer(movePlayerPacket);
-						delete movePlayerPacket;
-						pos.y = -4477558.0f;
-						movePlayerPacket = new C_MovePlayerPacket(g_Data.getLocalPlayer(), pos);
-						g_Data.getClientInstance()->loopbackPacketSender->sendToServer(movePlayerPacket);
-						delete movePlayerPacket;
+		if (isMineplex) {
+			if (strcmp(g_Data.getRakNetInstance()->serverIp.getText(), "mco.mineplex.com") == 0) {
+				vec3_t pos = *g_Data.getLocalPlayer()->getPos();
+				C_MovePlayerPacket* movePlayerPacket = new C_MovePlayerPacket(g_Data.getLocalPlayer(), pos);
+				g_Data.getClientInstance()->loopbackPacketSender->sendToServer(movePlayerPacket);
+				delete movePlayerPacket;
+				pos.y = -4477558.0f;
+				movePlayerPacket = new C_MovePlayerPacket(g_Data.getLocalPlayer(), pos);
+				g_Data.getClientInstance()->loopbackPacketSender->sendToServer(movePlayerPacket);
+				delete movePlayerPacket;
 					}
 				}
 			}

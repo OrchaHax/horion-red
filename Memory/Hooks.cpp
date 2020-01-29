@@ -350,8 +350,8 @@ __int64 Hooks::RenderText(__int64 a1, C_MinecraftUIRenderContext* renderCtx) {
 		static float currColor[4];                                          // ArrayList collors
 		static std::string horionStr = std::string("Horion");               // Static Horion logo / text
 		static float horionStrWidth = DrawUtils::getTextWidth(&horionStr);  // Graphical Width of Horion logo / text
-		static std::string dlStr = std::string("discord.gg/horion");
-		static float dlStrWidth = DrawUtils::getTextWidth(&dlStr);
+		static std::string red = std::string("Red");
+		static float getred = DrawUtils::getTextWidth(&red);
 
 		float yOffset = 0;  // Offset of next Text
 		vec2_t windowSize = g_Data.getClientInstance()->getGuiData()->windowSize;
@@ -376,7 +376,7 @@ __int64 Hooks::RenderText(__int64 a1, C_MinecraftUIRenderContext* renderCtx) {
 			hud = moduleMgr->getModule<HudModule>();
 		else if (hud->watermark && hud->isEnabled()) {
 			DrawUtils::drawText(vec2_t(windowSize.x - horionStrWidth * 1.5f - 2.f, windowSize.y - 22.f), &horionStr, nullptr, 1.5f);
-			DrawUtils::drawText(vec2_t(windowSize.x - dlStrWidth * 0.85f - 2.f, windowSize.y - 10.75f), &dlStr, nullptr, 0.85f);
+			DrawUtils::drawText(vec2_t(windowSize.x - getred * 0.85f - 2.f, windowSize.y - 10.75f), &red, nullptr, 0.85f);
 		}
 
 		// Draw ArrayList
@@ -517,6 +517,20 @@ __int64 Hooks::RenderText(__int64 a1, C_MinecraftUIRenderContext* renderCtx) {
 
 float* Hooks::Dimension_getFogColor(__int64 _this, float* color, float brightness) {
 	static auto oGetFogColor = g_Hooks.Dimension_getFogColorHook->GetFastcall<float*, __int64, float*, float>();
+
+	static IModule* nightMode = moduleMgr->getModule<NightMode>();
+	if (nightMode == nullptr)
+		nightMode = moduleMgr->getModule<NightMode>();
+	else if (nightMode->isEnabled()) {
+		// set the amount of color & belle is cute btw
+		color[0] = 0.f;
+		color[1] = 0.f;
+		color[2] = 0.1f;
+		color[3] = 0.6f;
+		return color;
+	}
+
+
 
 	static float rcolors[4];
 

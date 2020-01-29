@@ -237,7 +237,7 @@ void IModule::setEnabled(bool enabled) {
 #ifndef _DEBUG
 		if (!isFlashMode())  // Only print jetpack stuff in debug mode
 #endif
-			logF("%s %s", enabled ? "Enabled" : "Disabled", this->getModuleName());
+			// logF("%s %s", enabled ? "Enabled" : "Disabled", this->getModuleName());
 
 		if (enabled)
 			this->onEnable();
