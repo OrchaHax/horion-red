@@ -91,7 +91,9 @@ public:
 #endif
 	}
 	inline void setAllowWIPFeatures(bool enable = false) { isAllowingWIPFeatures = enable; };
-	inline bool isInjectorConnectionActive() { return injectorConnectionActive; };
+	inline bool isInjectorConnectionActive() {
+		return injectorConnectionActive;
+	};
 	inline void setInjectorConnectionActive(bool isActive) {
 		if (injectorConnectionActive && !isActive) {
 			std::queue<HorionDataPacket> empty;
@@ -128,6 +130,7 @@ public:
 	const SlimUtils::SlimMem* getSlimMem() {
 		return slimMem;
 	};
+
 	C_GameMode* getCGameMode() { return gameMode; };
 	C_EntityList* getEntityList() { return entityList; };
 	C_HIDController** getHIDController() { return &hidController; };
