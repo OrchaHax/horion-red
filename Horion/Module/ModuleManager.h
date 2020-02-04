@@ -75,6 +75,7 @@
 #include "Modules/Disabler.h"
 #include "Modules/NightMode.h"
 #include "Modules/Godmode.h"
+#include "Modules/TP.h"
 
 #ifdef _DEBUG
 #include "Modules/TestModule.h"
