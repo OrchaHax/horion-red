@@ -74,6 +74,7 @@
 #include "Modules/Xray.h"
 #include "Modules/Disabler.h"
 #include "Modules/NightMode.h"
+#include "Modules/Godmode.h"
 
 #ifdef _DEBUG
 #include "Modules/TestModule.h"
