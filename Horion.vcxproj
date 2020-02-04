@@ -217,6 +217,7 @@
     <ClCompile Include="Horion\Module\Modules\Speed.cpp" />
     <ClCompile Include="Horion\Module\Modules\StackableItem.cpp" />
     <ClCompile Include="Horion\Module\Modules\Step.cpp" />
+    <ClCompile Include="Horion\Module\Modules\TP.cpp" />
     <ClCompile Include="Horion\Module\Modules\TestModule.cpp" />
     <ClCompile Include="Horion\Module\Modules\Timer.cpp" />
     <ClCompile Include="Horion\Module\Modules\Tower.cpp" />
@@ -308,6 +309,7 @@
     <ClInclude Include="Horion\Module\Modules\Speed.h" />
     <ClInclude Include="Horion\Module\Modules\StackableItem.h" />
     <ClInclude Include="Horion\Module\Modules\Step.h" />
+    <ClInclude Include="Horion\Module\Modules\TP.h" />
     <ClInclude Include="Horion\Module\Modules\TestModule.h" />
     <ClInclude Include="Horion\Module\Modules\Timer.h" />
     <ClInclude Include="Horion\Module\Modules\Tower.h" />
