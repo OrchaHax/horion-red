@@ -79,6 +79,7 @@ void ModuleManager::initModules() {
 	this->moduleList.push_back(new Disabler());
 	this->moduleList.push_back(new NightMode());
 	this->moduleList.push_back(new Godmode());
+	this->moduleList.push_back(new TP());
 
 #ifdef _DEBUG
 	this->moduleList.push_back(new TestModule());
